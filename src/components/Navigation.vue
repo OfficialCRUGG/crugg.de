@@ -1,7 +1,7 @@
 <template>
   <div id="nav" class="bg-gray-100 dark:bg-gray-900 border-blue-500 border-t-4 py-2">
     <div class="flex flex-row justify-between dynamic-padding items-center">
-      <img src="img/transparent_logo.png" alt="C" class="h-8 crugg-logo">
+      <router-link to="/" tag="img" src="img/transparent_logo.png" alt="C" class="h-8 crugg-logo cursor-pointer" />
       <div class="flex flex-row space-x-4 items-center">
         <router-link to="/">Home</router-link>
         <router-link to="/blog">Blog</router-link>
