@@ -26,11 +26,11 @@
     </section>
     <section class="dynamic-padding mt-20">
       <h1 class="font-bold text-4xl mb-5">Technologies I use</h1>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3">
         <TechnologyCard v-for="technology in technologies" class="flex-grow" :key="technology.id" :id="technology.id" :title="technology.name" :url="technology.url" />
       </div>
       <h1 class="font-bold text-4xl mt-8 mb-5">Programs I use</h1>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3">
         <TechnologyCard v-for="program in programs" class="flex-grow" :key="program.id" :id="program.id" :title="program.name" :url="program.url" />
       </div>
     </section>
