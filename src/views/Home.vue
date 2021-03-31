@@ -10,7 +10,7 @@
           <h2 class="font-semibold text-2xl mb-3">I'm Dennis, a {{ age }}-year-old developer, graphic designer and wannabe entrepreneur.</h2>
           <div class="flex space-x-5 items-center">
             <Status />
-            <div id="shareButton" class="dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 dark:hover:border-gray-600 bg-white border-gray-200 hover:bg-gray-100 hover:border-gray-300 border px-3 py-1 rounded-md cursor-pointer">Share this website!</div>
+            <div id="shareButton" :class="`dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 dark:hover:border-gray-600 bg-white border-gray-200 hover:bg-gray-100 hover:border-gray-300 border px-3 py-1 rounded-md cursor-pointer ${!canShare ? 'invisible' : ''}`">Share this website!</div>
           </div>
         </div>
       </div>
@@ -60,6 +60,7 @@ export default {
   },
   data() {
     return {
+      canShare: false,
       projects: {
         primary: [
           {
@@ -229,6 +230,11 @@ export default {
     document.querySelector("#shareButton").addEventListener("click", () => {
       navigator.share({ title: "CRUGG's Website", text: "Check out CRUGG's Website!", url: window.location.href });
     });
+    
+    if(navigator.share) {
+      this.canShare = true;
+      console.log(this.canShare);
+    }
   }
 }
 </script>
