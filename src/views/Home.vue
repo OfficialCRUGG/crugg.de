@@ -233,7 +233,6 @@ export default {
     
     if(navigator.share) {
       this.canShare = true;
-      console.log(this.canShare);
     }
   }
 }
