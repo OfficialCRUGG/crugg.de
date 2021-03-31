@@ -1,6 +1,17 @@
-# crugg.de-2021
+<div align="center">
 
-## Project setup
+![](.github/img/header.png)
+
+# crugg.de
+
+![](.github/img/builtwith@0.25.png)
+![](.github/img/lanyard@0.25.png)
+
+</div>
+
+## Commands
+
+### Project setup
 ```
 yarn install
 ```
@@ -19,6 +30,3 @@ yarn build
 ```
 yarn lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
