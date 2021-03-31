@@ -218,6 +218,26 @@ export default {
           name: "Trello",
           url: "https://trello.com/"
         },
+        {
+          id: "clickup",
+          name: "ClickUp",
+          url: "https://clickup.com/"
+        },
+        {
+          id: "afdesigner",
+          name: "Affinity Designer",
+          url: "https://affinity.serif.com/designer/"
+        },
+        {
+          id: "ae",
+          name: "Adobe After Effects",
+          url: "https://www.adobe.com/products/aftereffects.html"
+        },
+        {
+          id: "pr",
+          name: "Adobe Premiere Pro",
+          url: "https://www.adobe.com/products/premiere.html"
+        }
       ]
     }
   },
