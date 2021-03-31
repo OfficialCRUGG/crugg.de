@@ -16,7 +16,7 @@
       </div>
     </section>
     <section class="dynamic-padding mt-20">
-      <h1 class="font-bold text-4xl mb-5">Project / Companies</h1>
+      <h1 class="font-bold text-4xl mb-5">Projects / Companies</h1>
       <div class="lg:flex lg:space-x-6 space-y-6 lg:space-y-0 mb-6">
         <ProjectCard v-for="project in projects.primary" class="flex-grow" :key="project.id" :id="project.id" :title="project.title" :description="project.description" :url="project.url" :image="project.image" :position="project.position" />
       </div>
