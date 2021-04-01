@@ -38,7 +38,7 @@ export default {
 
             // Add presence based info
             if(lanyard.discord_status === "online" || lanyard.discord_status === "dnd") {
-                const filtered = lanyard.activities.filter((activity) => activity.type !== 4)[0] || {}
+                const filtered = lanyard.activities.filter((activity) => activity.type !== 4).pop() || {}
                 if(filtered.name === "YouTube Music" && filtered.state && filtered.details && (filtered.assets.small_text === "Playing back" || filtered.assets.small_text === "Playlist on loop" || filtered.assets.small_text === "On loop")) {
                     const note = '<svg style="width:20px;height:20px" class="inline-block" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17S7.79 21 10 21 14 19.21 14 17V7H18V3H12Z" /></svg>'
                     string += ` | ${note} Listening to <b>${filtered.details}</b> by <b>${filtered.state.split(" - ")[0]}</b>`
