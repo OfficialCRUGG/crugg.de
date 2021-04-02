@@ -71,6 +71,11 @@
     cssnano-preset-default "^4.0.0"
     postcss "^7.0.0"
 
+"@jinsung.lim/tailwindcss-filters@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@jinsung.lim/tailwindcss-filters/-/tailwindcss-filters-0.1.1.tgz#688d0af55182b45c85036752572415f82abfce05"
+  integrity sha512-t4JMY8uycn525G4FcBz5F9zoynAzdynoYabZ7Wzv+DNx0clY/ZUn/uBGAUNmJqAo59JhSdfUBHfH2ZEy08iXcw==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"

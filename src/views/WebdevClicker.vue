@@ -1,6 +1,10 @@
 <template>
   <div class="clicker dynamic-padding lg:flex mt-5">
     <div class="h-full w-full lg:w-4/12 text-center">
+      <Modal noButton="No, keep my data!" yesButton="Yes, wipe all data!" v-if="deleteDataModal" @no="deleteDataModal = false" @yes="deleteData()">
+        <h1 class="font-bold text-2xl">Do you really want to reset all your data?</h1>
+        <p class="text-lg">This action will not be revertable. <s>We recommend using the Backup Feature first!</s> A backup system will be added soon!</p>
+      </Modal>
       <div v-if="!this.saveGame.saveVer || this.saveGame.saveVer < this.currentVer" class="bg-red-200 border-l-4 border-red-500 dark:text-black mx-5 mb-5 py-1 px-3">
         <p>Hey! Your savestate is outdated. It is still running on v{{ this.saveGame.saveVer || 0 }}. Please delete your data to play v{{ currentVer }}!</p>
       </div>
@@ -11,9 +15,15 @@
       <div class="bg-gray-200 dark:bg-gray-900 m-5 py-8 rounded-md cursor-pointer select-none font-bold" @click="handleClick()">
           Write a line of code!
       </div>
-      <div class="bg-gray-200 dark:bg-gray-900 m-5 py-2 rounded-md cursor-pointer select-none" @click="deleteData()">
-          Delete data (final)
+      <div class="bg-gray-200 dark:bg-gray-900 m-5 py-2 rounded-md cursor-pointer select-none" @click="deleteDataModal = true">
+          Wipe data
       </div>
+      <p>Game Version: v1.1.0 | Save Version: v{{ this.currentVer }}</p>
+      <p class="mt-3">
+        <b>Planned features:</b><br>
+        - Backups<br>
+        - Modding
+      </p>
     </div>
     <div class="h-full w-full lg:w-4/12 pr-2">
       <div v-for="job in saveGame.employees" :key="job.id">
@@ -35,11 +45,17 @@
 </template>
 
 <script>
+import Modal from "../components/Modal.vue";
+
 export default {
+  components: {
+    Modal
+  },
   data() {
     return {
       cps: 0,
       currentVer: 3,
+      deleteDataModal: false,
       saveGame: {
         saveVer: 3,
         lines: 0,
