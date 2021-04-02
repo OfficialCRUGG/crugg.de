@@ -30,6 +30,13 @@ const routes = [
     component: function () {
       return import(/* webpackChunkName: "contact" */ '../views/Contact.vue')
     }
+  },
+  {
+    path: '/webdev-clicker',
+    name: 'WebdevClicker',
+    component: function () {
+      return import(/* webpackChunkName: "contact" */ '../views/WebdevClicker.vue')
+    }
   }
 ]
 
