@@ -133,7 +133,7 @@ export default {
         },
         {
           id: "css",
-          name: "CCS3",
+          name: "CSS3",
           url: "https://www.w3.org/Style/CSS/Overview.en.html"
         },
         {
