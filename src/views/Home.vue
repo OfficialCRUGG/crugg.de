@@ -90,28 +90,28 @@ export default {
         ],
         secondary: [
           {
-            id: "statemc",
-            title: "StateMC",
-            description: "German roleplaying community inside Minecraft using game modifications",
-            url: "https://wwww.statemc.de",
-            image: false,
-            position: "Webdesign, Development"
-          },
-          {
-            id: "teega",
-            title: "TEEGA Logistics",
-            description: "Virtual trucking company for Euro Truck Simulator 2 & American Truck",
+            id: "prideconvoy",
+            title: "PRIDE Convoy",
+            description: "Euro Truck Simulator 2 charity event in support of The Trevor Project",
             url: "https://teegavtc.com",
             image: false,
-            position: "Management, Development"
+            position: "Organization, Planning"
           },
           {
-            id: "truckspace",
-            title: "Truckspace Group",
-            description: "Small team of developers creating products for trucking simulators.",
+            id: "queerhome",
+            title: "Queer Home",
+            description: "Instagram page to spread awareness and news of the LGBTQIA+ commmunity",
             url: "https://truckspace.group",
             image: false,
-            position: "Quality Assurance, Beta Testing"
+            position: "Design, Writer"
+          },
+          {
+            id: "tba",
+            title: "To be announced",
+            description: "A new and innovative gaming & social platform for gamers of all ages",
+            url: "javascript:void(0)",
+            image: false,
+            position: "???"
           }
         ]
       },
